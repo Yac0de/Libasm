@@ -1,11 +1,47 @@
 # Assembly Language Basics - libasm Project
 
+---
+
+## **Table of Contents**
+1. [Project Overview](#1-project-overview)
+2. [Project Structure](#2-project-structure)
+3. [How to Use This Project](#3-how-to-use-this-project)
+4. [Expectations and Important Guidelines](#4-expectations-and-important-guidelines)
+5. [Registers Overview](#5-registers-overview)
+6. [Assembly Directives](#6-assembly-directives)
+7. [Common Assembly Instructions](#7-common-assembly-instructions)
+8. [System Calls (Linux x86-64)](#8-system-calls-linux-x86-64)
+
+---
+
 ## **1. Project Overview**
 
 The `libasm` project involves implementing standard C functions in assembly language using NASM. The primary goal is to understand low-level programming concepts such as registers, memory management, system calls, and function conventions.
 
 ---
-## **2. How to Use This Project**
+## **2. Project Structure**
+
+```bash
+.
+├── Makefile
+├── README.md
+├── ft_read.s
+├── ft_strcmp.s
+├── ft_strcpy.s
+├── ft_strdup.s
+├── ft_strlen.s
+├── ft_write.s
+└── tests
+    ├── test_ft_read.c
+    ├── test_ft_strcmp.c
+    ├── test_ft_strcpy.c
+    ├── test_ft_strdup.c
+    ├── test_ft_strlen.c
+    ├── test_ft_write.c
+    └── test_libasm.c
+```
+---
+## **3. How to Use This Project**
 
 ### **Environment Setup:**
 
@@ -48,7 +84,7 @@ Example:
 ```
 ---
 
-## **3. Expectations and Important Guidelines**
+## **4. Expectations and Important Guidelines**
 
 The `libasm` project comes with specific constraints that must be respected to ensure proper functionality and compatibility. Below are the critical requirements and how to address them:
 
@@ -107,7 +143,7 @@ objdump -T /usr/lib/x86_64-linux-gnu/libc.so.6 | grep errno_location
 
 ---
 
-## **4. Registers Overview**
+## **5. Registers Overview**
 
 Registers are small, fast memory locations within the CPU. Understanding how to use them is crucial for writing efficient assembly code.
 
@@ -206,7 +242,7 @@ These flags ensure that conditional jumps and decisions are executed correctly b
 
 ---
 
-## **5. Assembly Directives**
+## **6. Assembly Directives**
 
 Assembly directives are special instructions used by the assembler to control how the code is organized, compiled, and linked. These directives do not generate machine code but influence the assembler's behavior.
 
@@ -228,7 +264,7 @@ Assembly directives are special instructions used by the assembler to control ho
 
 ---
 
-## **6. Common Assembly Instructions**
+## **7. Common Assembly Instructions**
 
 | Instruction    | Meaning                   |
 | -------------- | ------------------------- |
@@ -246,7 +282,7 @@ Assembly directives are special instructions used by the assembler to control ho
 
 ---
 
-## **7. System Calls (Linux x86-64)**
+## **8. System Calls (Linux x86-64)**
 
 System calls are low-level functions provided by the operating system that allow programs to interact with hardware and perform essential tasks such as reading from or writing to files.
 
