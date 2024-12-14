@@ -48,11 +48,11 @@ Example:
 ```
 ---
 
-## **2. Expectations and Important Guidelines**
+## **3. Expectations and Important Guidelines**
 
 The `libasm` project comes with specific constraints that must be respected to ensure proper functionality and compatibility. Below are the critical requirements and how to address them:
 
-### **1. No ****************************************`-no-pie`**************************************** Compilation Flag**
+### **1. No `-no-pie` Compilation Flag**
 
 - **What It Means:**
 
@@ -71,7 +71,7 @@ The `libasm` project comes with specific constraints that must be respected to e
     - Using `rel ... wrt ..got` ensures compatibility with PIE by referencing addresses **relatively** through the **Global Offset Table (GOT)**.
     - `malloc wrt ..plt` uses the **Procedure Linkage Table (PLT)** for dynamic linking at runtime.
 
-### \*\*2. Properly Setting \*\***`errno`**
+### **2. Properly Setting errno**
 
 - **What It Means:**
 
@@ -99,7 +99,7 @@ The `libasm` project comes with specific constraints that must be respected to e
 
 ---
 
-## **3. Registers Overview**
+## **4. Registers Overview**
 
 Registers are small, fast memory locations within the CPU. Understanding how to use them is crucial for writing efficient assembly code.
 
@@ -146,7 +146,7 @@ Registers are small, fast memory locations within the CPU. Understanding how to 
 
 ---
 
-## **4. Assembly Directives**
+## **5. Assembly Directives**
 
 Assembly directives are special instructions used by the assembler to control how the code is organized, compiled, and linked. These directives do not generate machine code but influence the assembler's behavior.
 
@@ -168,7 +168,7 @@ Assembly directives are special instructions used by the assembler to control ho
 
 ---
 
-## **5. Common Assembly Instructions**
+## **6. Common Assembly Instructions**
 
 | Instruction    | Meaning                   |
 | -------------- | ------------------------- |
@@ -186,7 +186,7 @@ Assembly directives are special instructions used by the assembler to control ho
 
 ---
 
-## **6. System Calls (Linux x86-64)**
+## **7. System Calls (Linux x86-64)**
 
 System calls are low-level functions provided by the operating system that allow programs to interact with hardware and perform essential tasks such as reading from or writing to files.
 
