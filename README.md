@@ -5,6 +5,48 @@
 The `libasm` project involves implementing standard C functions in assembly language using NASM. The primary goal is to understand low-level programming concepts such as registers, memory management, system calls, and function conventions.
 
 ---
+## **2. How to Use This Project**
+
+### **Environment Setup:**
+
+1. **Install Required Tools:**
+   ```sh
+   sudo apt update
+   sudo apt install nasm gcc make
+   ```
+
+### **Building the Library:**
+
+Run the following command to compile the library:
+
+```sh
+make
+```
+
+### **Running the Tester:**
+
+To test the implemented functions, run:
+
+```sh
+make test_libasm
+```
+
+This compiles and runs all tests.
+
+### **Testing Individual Functions:**
+
+You can also run specific function tests using:
+
+```sh
+./test_libasm <function_name>
+```
+
+Example:
+
+```sh
+./test_libasm ft_strlen
+```
+---
 
 ## **2. Expectations and Important Guidelines**
 
