@@ -82,6 +82,14 @@ The `libasm` project comes with specific constraints that must be respected to e
   - The project allows calling:
     - `__errno_location` (Linux) or `___error` (macOS) as external functions.
 
+*Tip: You can inspect the system's standard C library to confirm the availability of these functions using the following command:*
+
+```sh
+objdump -T /usr/lib/x86_64-linux-gnu/libc.so.6 | grep errno_location
+```
+
+*This will display information about the `__errno_location` symbol, indicating its address and availability in the linked C library.*
+
 - **How We Implemented It:**
 
   ```assembly
