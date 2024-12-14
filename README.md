@@ -296,6 +296,10 @@ To make a system call, the appropriate syscall number is placed in the `rax` reg
 | `write`      | 1          | fd     | buf   | count |       |
 | `exit`       | 60         | status | —     | —     |       |
 
+### **Reference:**
+👉 You can see the complete system call table at:  
+🔗 [Linux Syscalls Table - w3challs](https://syscalls.w3challs.com/)
+
 ### **Example: Write System Call**
 
 ```assembly
