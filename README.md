@@ -144,6 +144,35 @@ Registers are small, fast memory locations within the CPU. Understanding how to 
 | `rsp`     | Stack pointer (auto-managed) |
 | `r12-r15` | General-purpose, preserved   |
 
+### **Register Size Extensions**
+
+Registers can be accessed in different sizes depending on the operation. This is useful for operations involving smaller data sizes.
+
+| Register | 64-bit | 32-bit | 16-bit | 8-bit High | 8-bit Low |
+|----------|--------|--------|--------|------------|-----------|
+| `rax`    | `rax`  | `eax`  | `ax`   | `ah`       | `al`      |
+| `rbx`    | `rbx`  | `ebx`  | `bx`   | `bh`       | `bl`      |
+| `rcx`    | `rcx`  | `ecx`  | `cx`   | `ch`       | `cl`      |
+| `rdx`    | `rdx`  | `edx`  | `dx`   | `dh`       | `dl`      |
+| `rsi`    | `rsi`  | `esi`  | `si`   | *(N/A)*    | *(N/A)*   |
+| `rdi`    | `rdi`  | `edi`  | `di`   | *(N/A)*    | *(N/A)*   |
+| `rsp`    | `rsp`  | `esp`  | `sp`   | *(N/A)*    | *(N/A)*   |
+| `rbp`    | `rbp`  | `ebp`  | `bp`   | *(N/A)*    | *(N/A)*   |
+
+### **Why Use Register Extensions?**
+
+- **Example in `strcpy`:**
+  - In `ft_strcpy`, we used `al` because we only needed to load a single byte from memory.
+  - Example:
+    ```assembly
+    mov al, byte [rsi]   ; Load 1 byte from source string
+    mov byte [rdi], al   ; Store 1 byte into destination string
+    ```
+
+By using `al` instead of `rax`, we avoid unnecessary operations on larger registers, making the code more efficient and easier to manage.
+
+Registers are small, fast memory locations within the CPU. Understanding how to use them is crucial for writing efficient assembly code.
+
 ### **Flags Overview**
 
 Flags are special registers used to store the result of arithmetic and logical operations. They help control the flow of programs by influencing conditional jumps and function behavior.
