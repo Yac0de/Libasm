@@ -9,7 +9,7 @@ The `libasm` project involves implementing standard C functions in assembly lang
 
 ### **Environment Setup:**
 
-1. **Install Required Tools:**
+  - **Install Required Tools:**
    ```sh
    sudo apt update
    sudo apt install nasm gcc make
