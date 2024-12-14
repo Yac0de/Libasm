@@ -144,6 +144,29 @@ Registers are small, fast memory locations within the CPU. Understanding how to 
 | `rsp`     | Stack pointer (auto-managed) |
 | `r12-r15` | General-purpose, preserved   |
 
+### **Flags Overview**
+
+Flags are special registers used to store the result of arithmetic and logical operations. They help control the flow of programs by influencing conditional jumps and function behavior.
+
+| Flag Name | Description                | Purpose                        |
+|-----------|----------------------------|-------------------------------|
+| `ZF`     | Zero Flag                  | Set if result is zero         |
+| `SF`     | Sign Flag                  | Set if result is negative     |
+| `CF`     | Carry Flag                 | Set if unsigned overflow      |
+| `OF`     | Overflow Flag              | Set if signed overflow        |
+| `PF`     | Parity Flag                | Set if result has even parity |
+| `AF`     | Auxiliary Carry Flag       | Used in binary-coded math     |
+
+Example (Using Flags for Comparison):
+```assembly
+cmp rax, rbx       ; Compare rax and rbx
+je equal_label     ; Jump if equal (ZF = 1)
+jl less_label      ; Jump if less (SF ≠ OF)
+jg greater_label   ; Jump if greater (SF = OF)
+```
+
+These flags ensure that conditional jumps and decisions are executed correctly based on the results of previous instructions.
+
 ---
 
 ## **5. Assembly Directives**
