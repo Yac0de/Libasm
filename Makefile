@@ -13,7 +13,7 @@ TEST_DIR = tests
 ASM_FILES = strlen strcpy strcmp write read strdup
 TEST_FILES = libasm ft_strlen ft_strcpy ft_strcmp ft_write ft_read ft_strdup
 
-SRCS = $(addprefix $(SRC_DIR)/ft_, $(addsuffix .asm, $(ASM_FILES)))
+SRCS = $(addprefix $(SRC_DIR)/ft_, $(addsuffix .s, $(ASM_FILES)))
 OBJS = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(ASM_FILES)))
 TESTS = $(addprefix $(TEST_DIR)/test_, $(addsuffix .c, $(TEST_FILES)))
 
@@ -32,7 +32,7 @@ $(NAME): $(OBJS)
 	ranlib $(NAME)
 	@echo -e "$(GREEN)[✔] Archive $(NAME) created.$(RESET)"
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/ft_%.asm
+$(OBJ_DIR)/%.o: $(SRC_DIR)/ft_%.s
 	@mkdir -p $(OBJ_DIR)
 	@echo -e "$(YELLOW)[*] Assembling $<...$(RESET)"
 	$(NASM) $(NASMFLAGS) $< -o $@
