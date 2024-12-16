@@ -173,11 +173,11 @@ Registers are small, fast memory locations within the CPU. Understanding how to 
 | Register | Usage                 |
 | -------- | --------------------- |
 | `rax`    | Return value          |
-| `rcx`    | Counter/Argument 4    |
+| `rcx`    | Argument 4, Counter    |
 | `rdx`    | Argument 3, I/O data  |
-| `rsi`    | Source pointer        |
-| `rdi`    | Destination pointer   |
-| `r8-r11` | Extra arguments/temp. |
+| `rsi`    | Argument 2, Source pointer  |
+| `rdi`    | Argument 1, Destination pointer  |
+| `r8-r11` | Argument 5,6 ..., Extra arguments/temp. |
 
 ### **Callee-Saved Registers Summary**
 
